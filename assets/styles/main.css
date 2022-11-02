@@ -5,16 +5,14 @@
 }
 
 .logo-container {
-  margin: 0.5rem;
-  padding: 1em;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
 }
 
 h1 {
-  font-size: 6vw;
-  margin: 0.5rem;
-  display: inline;
-  font-family: "Cookie";
-  color: green;
+  font-size: 3em;
+  color: #d89536;
 }
 
 .navbar-links ul {
@@ -27,14 +25,15 @@ h1 {
 }
 .navbar-links li a {
   text-decoration: none;
-  color: blue;
+  color: white;
   padding: 1rem;
   display: block;
   font-size: 1.8em;
 }
 .navbar-links li a:hover {
-  background-color: green;
-  color: white;
+  background-color: #d89536;
+  color: #1f1f1f;
+  border-radius: 15px;
 }
 
 .toggle-button {
