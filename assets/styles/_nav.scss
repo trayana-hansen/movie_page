@@ -3,12 +3,10 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .logo-container {
   margin: 0.5rem;
   padding: 1em;
 }
-
 h1 {
   font-size: 6vw;
   margin: 0.5rem;
@@ -16,27 +14,27 @@ h1 {
   font-family: "Cookie";
   color: green;
 }
-
-.navbar-links ul {
-  margin: 0;
-  padding: 1em;
-  display: flex;
+.navbar-links {
+  ul {
+    margin: 0;
+    padding: 1em;
+    display: flex;
+  }
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: blue;
+      padding: 1rem;
+      display: block;
+      font-size: 1.8em;
+      &:hover {
+        background-color: green;
+        color: white;
+      }
+    }
+  }
 }
-.navbar-links li {
-  list-style: none;
-}
-.navbar-links li a {
-  text-decoration: none;
-  color: blue;
-  padding: 1rem;
-  display: block;
-  font-size: 1.8em;
-}
-.navbar-links li a:hover {
-  background-color: green;
-  color: white;
-}
-
 .toggle-button {
   position: absolute;
   top: 1rem;
@@ -46,14 +44,13 @@ h1 {
   justify-content: space-between;
   width: 30px;
   height: 21px;
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
 }
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-
 @media (max-width: 600px) {
   .toggle-button {
     display: flex;
@@ -61,16 +58,16 @@ h1 {
   .navbar-links {
     display: none;
     width: 100%;
-  }
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  .navbar-links li {
-    text-align: center;
-  }
-  .navbar-links li a {
-    padding: 0.5rem;
+    ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    li {
+      text-align: center;
+      a {
+        padding: 0.5rem;
+      }
+    }
   }
   .navbar {
     flex-direction: column;
@@ -80,6 +77,3 @@ h1 {
     display: flex;
   }
 }
-body {
-  background-color: #1f1f1f;
-}/*# sourceMappingURL=main.css.map */
