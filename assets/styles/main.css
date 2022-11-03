@@ -146,7 +146,6 @@ h3 {
   font-weight: bold;
 }
 
-
 #content {
   display: flex;
   flex-direction: row;
@@ -155,12 +154,12 @@ h3 {
   overflow: auto;
 }
 #content p {
-  color: white;
+  color: #fff;
   text-align: right;
   padding: 1vh;
 }
 #content h4 {
-  color: white;
+  color: #fff;
   text-align: center;
 }
 #content div {
@@ -172,6 +171,12 @@ h3 {
 span {
   display: block;
 }
+
+h2 {
+  margin-top: 18vh;
+  color: #d89536;
+}
+
 footer p {
   color: #d89536;
   text-align: center;
