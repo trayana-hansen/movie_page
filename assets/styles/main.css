@@ -146,6 +146,7 @@ h3 {
   font-weight: bold;
 }
 
+
 #content {
   display: flex;
   flex-direction: row;
@@ -153,6 +154,7 @@ h3 {
   width: 100vw;
   overflow: auto;
 }
+
 #content p {
   color: #fff;
   text-align: right;
@@ -162,7 +164,7 @@ h3 {
   color: #fff;
   text-align: center;
 }
-#content div {
+.content div {
   background-size: cover;
   height: 30vh;
   width: 13vw;
