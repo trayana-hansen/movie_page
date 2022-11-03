@@ -49,11 +49,11 @@ console.log(day);
     .finally(() => {
         console.log();
         contents.innerHTML = 
-        `<h2>TNT</h2>`
+        `<h2>The CW</h2>`
 
         apiData.forEach(element => {
 if (element.schedule.days == day) {
-    if (element.network.name == "TNT") {
+    if (element.network.name == "The CW") {
               console.log(element.rating.average);  
               
               contents.innerHTML += `
