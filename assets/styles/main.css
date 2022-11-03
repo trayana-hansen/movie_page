@@ -146,6 +146,32 @@ h3 {
   font-weight: bold;
 }
 
+
+#content {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  width: 100vw;
+  overflow: auto;
+}
+#content p {
+  color: white;
+  text-align: right;
+  padding: 1vh;
+}
+#content h4 {
+  color: white;
+  text-align: center;
+}
+#content div {
+  background-size: cover;
+  height: 30vh;
+  width: 13vw;
+}
+
+span {
+  display: block;
+}
 footer p {
   color: #d89536;
   text-align: center;
