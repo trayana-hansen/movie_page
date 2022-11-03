@@ -1,32 +1,33 @@
-.content{
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
-    width: 100vw;
-    overflow: auto;
-    p{
-        color: white;
-        text-align: right;
-        padding: 1vh;
-    }
-    h4{
-        color:white;
-        text-align: center;
-    }
-    article{
+@use "./colors" as c;
+@use "./fonts" as f;
 
+#content {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  width: 100vw;
+  overflow: auto;
+  p {
+    color: c.$white;
+    text-align: right;
+    padding: 1vh;
+  }
 
+  h4 {
+    color: c.$white;
+    text-align: center;
+  }
+
+  div {
+    background-size: cover;
+    height: 30vh;
+    width: 13vw;
+  }
 }
-div{
-background-size: cover;
-height: 30vh;
-width: 13vw;
+span {
+  display: block;
 }
-}
-span{
-    display: block;
-}
-h2{
-    margin-top: 18vh;
-    color: white;
+h2 {
+  margin-top: 18vh;
+  color: c.$gold;
 }

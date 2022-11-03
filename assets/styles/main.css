@@ -146,20 +146,22 @@ h3 {
   font-weight: bold;
 }
 
-.content {
+
+#content {
   display: flex;
   flex-direction: row;
   gap: 2em;
   width: 100vw;
   overflow: auto;
 }
-.content p {
-  color: white;
+
+#content p {
+  color: #fff;
   text-align: right;
   padding: 1vh;
 }
-.content h4 {
-  color: white;
+#content h4 {
+  color: #fff;
   text-align: center;
 }
 .content div {
@@ -174,7 +176,7 @@ span {
 
 h2 {
   margin-top: 18vh;
-  color: white;
+  color: #d89536;
 }
 
 footer p {
