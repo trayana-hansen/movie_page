@@ -52,8 +52,8 @@ console.log(day);
         `<h2>TNT</h2>`
 
         apiData.forEach(element => {
-
-            if (element.network.name == "TNT") {
+if (element.schedule.days == day) {
+    if (element.network.name == "TNT") {
               console.log(element.rating.average);  
               
               contents.innerHTML += `
@@ -63,10 +63,13 @@ console.log(day);
     <p><span>🔥</span>${element.rating.average}</p>
     
 </div>
-<h4>${element.schedule.day}</h4>
+<h4>${element.name}</h4>
 </article>
             `  
             }
+}
+
+            
             
 
         });
@@ -83,7 +86,8 @@ console.log(day);
         `<h2>${obj.value}</h2>`
         
         apiData.forEach(element => {
-            if (element.network.name == obj.value) {
+            if (element.schedule.days == day) {
+                if (element.network.name == obj.value) {
                 
               
               contents.innerHTML += `
@@ -97,6 +101,9 @@ console.log(day);
 </article>
             `  
             }
+            }
+
+            
             
 
         });
