@@ -2,6 +2,7 @@
 @use "./fonts" as f;
 
 footer {
+  margin-top: 4em;
   p {
     color: c.$gold;
     text-align: center;
