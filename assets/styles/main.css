@@ -200,6 +200,7 @@ h2 {
   margin-top: 3.5em;
   color: #d89536;
   text-align: center;
+  margin-left: 0.5em;
 }
 
 #tvChoice {
@@ -209,7 +210,7 @@ h2 {
   border-radius: 10px;
   margin-left: 2em;
   outline: 0;
-  width: 180px;
+  width: 140px;
   font-family: "Open Sans", sans-serif;
 }
 
