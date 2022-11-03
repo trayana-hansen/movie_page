@@ -213,6 +213,9 @@ h2 {
   font-family: "Open Sans", sans-serif;
 }
 
+footer {
+  margin-top: 4em;
+}
 footer p {
   color: #d89536;
   text-align: center;
