@@ -146,23 +146,26 @@ h3 {
   font-weight: bold;
 }
 
-#content {
+.content {
   display: flex;
   flex-direction: row;
   gap: 2em;
   width: 100vw;
   overflow: auto;
 }
-#content p {
+.content p {
   color: #fff;
   text-align: right;
   padding: 1vh;
 }
-#content h4 {
+.content h3 {
+  color: #fff;
+}
+.content h4 {
   color: #fff;
   text-align: center;
 }
-#content div {
+.content div {
   background-size: cover;
   height: 30vh;
   width: 13vw;
@@ -173,8 +176,18 @@ span {
 }
 
 h2 {
-  margin-top: 18vh;
+  margin-top: 3.5em;
   color: #d89536;
+  text-align: center;
+}
+
+#tvChoice {
+  background-color: #1f1f1f;
+  color: #d89536;
+  border: 2px solid #d89536;
+  border-radius: 10px;
+  margin-left: 2em;
+  outline: 0;
 }
 
 footer p {
