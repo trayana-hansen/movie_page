@@ -1,7 +1,14 @@
 @use "./nav";
+@use "./aboutUs";
+@use "./frontPage";
+@use "./schedule";
 @use "./colors" as c;
-@use "./fonts";
+@use "./fonts" as f;
 
+* {
+  scroll-behavior: smooth;
+}
 body {
   background-color: c.$black;
+  font-family: "Open Sans", sans-serif;
 }

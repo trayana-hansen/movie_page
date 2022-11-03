@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@font-face {
+  font-family: dreamAvenue;
+  src: url(../fonts/FontsFree-Net-Dream-Avenue.ttf);
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -11,8 +16,10 @@
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.2em;
   color: #d89536;
+  font-family: dreamAvenue, sans-serif;
+  font-weight: bold;
 }
 
 .navbar-links ul {
@@ -25,10 +32,12 @@ h1 {
 }
 .navbar-links li a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   padding: 1rem;
   display: block;
-  font-size: 1.8em;
+  font-family: dreamAvenue, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
 }
 .navbar-links li a:hover {
   background-color: #d89536;
@@ -79,6 +88,11 @@ h1 {
     display: flex;
   }
 }
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #1f1f1f;
+  font-family: "Open Sans", sans-serif;
 }/*# sourceMappingURL=main.css.map */
