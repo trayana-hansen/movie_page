@@ -47,6 +47,7 @@ console.log(day);
         //On error
     })
     .finally(() => {
+      window.localStorage.setItem('fetch', apiData)
         console.log();
         contents.innerHTML = 
         `<h2>The CW</h2>`
@@ -57,7 +58,7 @@ if (element.schedule.days == day) {
               console.log(element.rating.average);  
               
               contents.innerHTML += `
-            <article >
+            <article id="${element.id + 2}">
 <h3>${element.schedule.time}</h3>
 <div style="background-image: url('${element.image.original}')">
     <p><span>🔥</span>${element.rating.average}</p>
@@ -73,14 +74,27 @@ if (element.schedule.days == day) {
             
 
         });
-        
+        document.querySelectorAll('article').forEach(element => {
+          element.addEventListener('click', function () {
+              document.querySelector('#modalContent').innerHTML = `
+<article>
+<h3>${apiDataModal[element.id].schedule.time}</h3>
+<div style="background-image: url('${apiDataModal[element.id].image.original}')">
+<p><span>🔥</span>${apiDataModal[element.id].rating.average}</p>
+
+</div>
+<h4>${apiDataModal[element.id].name}</h4>
+</article>
+`
+modal.style.display = "block";
+          })
+      }); 
     })
    }
 
    fetchCall()
 
    function Clear(obj) {
-    console.log(document.querySelectorAll('select')[0]);
         apiData.sort()
         contents.innerHTML = 
         `<h2>${obj.value}</h2>`
@@ -91,7 +105,7 @@ if (element.schedule.days == day) {
                 
               
               contents.innerHTML += `
-            <article >
+            <article id="${element.id}">
 <h3>${element.schedule.time}</h3>
 <div style="background-image: url('${element.image.original}')">
     <p><span>🔥</span>${element.rating.average}</p>
@@ -107,5 +121,19 @@ if (element.schedule.days == day) {
             
 
         });
-        
+       document.querySelectorAll('article').forEach(element => {
+                element.addEventListener('click', function () {
+                    document.querySelector('#modalContent').innerHTML = `
+<article>
+<h3>${apiDataModal[element.id].schedule.time}</h3>
+<div style="background-image: url('${apiDataModal[element.id].image.original}')">
+    <p><span>🔥</span>${apiDataModal[element.id].rating.average}</p>
+    
+</div>
+<h4>${apiDataModal[element.id].name}</h4>
+</article>
+`
+modal.style.display = "block";
+                })
+            }); 
     }

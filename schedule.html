@@ -9,6 +9,7 @@
     <script src="./assets/js/nav.js" defer></script>
     <script src="./assets/js/footer.js" defer></script>
     <script src="./assets/js/schedule.js" defer></script>
+    <script src="./assets/js/model.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -37,7 +38,18 @@
         </div>
       </nav>
     </header>
+    <button id="myBtn">Open Modal</button>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+      <!-- Modal content -->
+      <div id="modalContent" class="modal-content">
+        
+        <p>Some text in the Modal..</p>
+      </div>
+    
+    </div>
     <select name="" id="tvChoice" value="TNT" onchange="Clear(this)">
       <option value="TNT">TNT</option>
       <option value="CBS">CBS</option>

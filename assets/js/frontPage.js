@@ -56,7 +56,7 @@ fetch(url)
           if (element.rating.average >= 8) {
           
         contents.innerHTML += `
-      <article >
+      <article id="${element.id}">
 <h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
 <p><span>🔥</span>${element.rating.average}</p>
@@ -74,7 +74,7 @@ for (let index = 0; index < 10; index++) {
   const element = apiData[random];
 
       contents2.innerHTML += `
-    <article >
+    <article id="${element.id}">
 <h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
 <p><span>🔥</span>${element.rating.average}</p>
@@ -86,9 +86,6 @@ for (let index = 0; index < 10; index++) {
 
 }
 
-  apiData.forEach(element => {
-    
-});
 }
 
         
