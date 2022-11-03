@@ -146,6 +146,7 @@ h3 {
   font-weight: bold;
 }
 
+
 #content {
   display: flex;
   flex-direction: row;
@@ -171,10 +172,11 @@ h3 {
 span {
   display: block;
 }
-
-h2 {
-  margin-top: 18vh;
-  color: white;
+footer p {
+  color: #d89536;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 * {
