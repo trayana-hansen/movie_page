@@ -1,0 +1,23 @@
+@use "./colors" as c;
+@use "./fonts" as f;
+
+h5 {
+  font-family: dreamAvenue, sans-serif;
+  color: c.$gold;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.content {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 15px;
+  }
+  &::-webkit-scrollbar-track {
+    background: c.$black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: c.$gold;
+    border-radius: 10px;
+  }
+}

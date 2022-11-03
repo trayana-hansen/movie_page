@@ -146,6 +146,24 @@ h3 {
   font-weight: bold;
 }
 
+h5 {
+  font-family: dreamAvenue, sans-serif;
+  color: #d89536;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+.content::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: #d89536;
+  border-radius: 10px;
+}
 
 .content {
   display: flex;
@@ -162,10 +180,15 @@ h3 {
 }
 .content h3 {
   color: #fff;
+
+
+  font-size: 1.5em;
+
 }
 .content h4 {
   color: #fff;
   text-align: center;
+  font-size: 1em;
 }
 .content div {
   background-size: cover;
@@ -181,6 +204,7 @@ h2 {
   margin-top: 3.5em;
   color: #d89536;
   text-align: center;
+
 }
 
 #tvChoice {
@@ -190,8 +214,23 @@ h2 {
   border-radius: 10px;
   margin-left: 2em;
   outline: 0;
+
 }
 
+#tvChoice {
+  background-color: #1f1f1f;
+  color: #d89536;
+  border: 2px solid #d89536;
+  border-radius: 10px;
+  margin-left: 2em;
+  outline: 0;
+  width: 180px;
+  font-family: "Open Sans", sans-serif;
+}
+
+footer {
+  margin-top: 4em;
+}
 footer p {
   color: #d89536;
   text-align: center;
