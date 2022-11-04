@@ -1,0 +1,28 @@
+#modalContent{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    img{
+      height: 60vh;
+    }
+    #modalRightDiv{
+      h6{
+        display: flex;
+        font-size: 25px;
+        margin-top: 3.5em;
+        text-align: left;
+        span{
+          margin-left: 0.5vw;
+          font-size: 10px;
+        }
+        
+  
+      }
+      p{
+        display: flex;
+        
+          span{
+            margin-left: 0.5vw;
+          }
+        }
+    }
+  }

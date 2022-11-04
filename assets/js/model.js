@@ -24,26 +24,6 @@ window.onclick = function(event) {
   }
 }
 
-const urlModal = 'http://api.tvmaze.com/shows'
-let apiDataModal;
-    
-    fetch(url)
-        .then(response => {
-            return response.json();
-            //parsing our data
-        })
-        .then(data => {
-            console.log(data);
-            apiDataModal = data
-            //Our parsed data
-        })
-        .catch(error => {
-            console.log(error);
-            //On error
-        })
-        .finally(() => {
-            
-        })
 
 
 
