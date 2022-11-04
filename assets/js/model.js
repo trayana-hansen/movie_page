@@ -23,10 +23,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 6098513d58a741c3d17fc3db64edc3ee4a6946ad
