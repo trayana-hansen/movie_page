@@ -60,7 +60,6 @@ fetch(url)
 <h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
 <p><span>🔥</span>${element.rating.average}</p>
-
 </div>
 <h4>${element.name}</h4>
 </article>
@@ -74,11 +73,10 @@ for (let index = 0; index < 10; index++) {
   const element = apiData[random];
 
       contents2.innerHTML += `
-    <article id="${element.id}">
+    <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
 <p><span>🔥</span>${element.rating.average}</p>
-
 </div>
 <h4>${element.name}</h4>
 </article>
@@ -92,7 +90,6 @@ document.querySelectorAll('article').forEach(element => {
       <div id="modalRightDiv">
         <h6>${apiData[element.id].name} <span>${apiData[element.id].network.name}</span></h6>
         <p>${apiData[element.id].summary}</p>
-
         <p>${apiData[element.id].genres}</p>
         <p>${apiData[element.id].runtime} min</p>
         <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
@@ -111,5 +108,3 @@ modal.style.display = "block";
     )}
 
 fetchCall()
-
- 
