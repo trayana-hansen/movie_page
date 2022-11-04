@@ -58,7 +58,7 @@ if (element.schedule.days == day) {
               console.log(element.rating.average);  
               
               contents.innerHTML += `
-            <article id="${element.id + 2}">
+            <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}</h3>
 <div style="background-image: url('${element.image.original}')">
     <p><span>🔥</span>${element.rating.average}</p>
@@ -77,14 +77,15 @@ if (element.schedule.days == day) {
         document.querySelectorAll('article').forEach(element => {
           element.addEventListener('click', function () {
               document.querySelector('#modalContent').innerHTML = `
-<article>
-<h3>${apiDataModal[element.id].schedule.time}</h3>
-<div style="background-image: url('${apiDataModal[element.id].image.original}')">
-<p><span>🔥</span>${apiDataModal[element.id].rating.average}</p>
-
-</div>
-<h4>${apiDataModal[element.id].name}</h4>
-</article>
+              <img src="${apiData[element.id].image.original}" alt="">
+              <div id="modalRightDiv">
+                <h6>${apiData[element.id].name} <span>${apiData[element.id].network.name}</span></h6>
+                <p>${apiData[element.id].summary}</p>
+      
+                <p>${apiData[element.id].genres}</p>
+                <p>${apiData[element.id].runtime} min</p>
+                <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
+              </div>
 `
 modal.style.display = "block";
           })
@@ -102,10 +103,11 @@ modal.style.display = "block";
         apiData.forEach(element => {
             if (element.schedule.days == day) {
                 if (element.network.name == obj.value) {
-                
+                  
+                console.log(apiData.indexOf(element));
               
               contents.innerHTML += `
-            <article id="${element.id}">
+            <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}</h3>
 <div style="background-image: url('${element.image.original}')">
     <p><span>🔥</span>${element.rating.average}</p>
@@ -124,14 +126,15 @@ modal.style.display = "block";
        document.querySelectorAll('article').forEach(element => {
                 element.addEventListener('click', function () {
                     document.querySelector('#modalContent').innerHTML = `
-<article>
-<h3>${apiDataModal[element.id].schedule.time}</h3>
-<div style="background-image: url('${apiDataModal[element.id].image.original}')">
-    <p><span>🔥</span>${apiDataModal[element.id].rating.average}</p>
-    
-</div>
-<h4>${apiDataModal[element.id].name}</h4>
-</article>
+                    <img src="${apiData[element.id].image.original}" alt="">
+                    <div id="modalRightDiv">
+                      <h6>${apiData[element.id].name} <span>${apiData[element.id].network.name}</span></h6>
+                      <p>${apiData[element.id].summary}</p>
+            
+                      <p>${apiData[element.id].genres}</p>
+                      <p>${apiData[element.id].runtime} min</p>
+                      <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
+                    </div>
 `
 modal.style.display = "block";
                 })
