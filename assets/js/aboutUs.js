@@ -40,3 +40,4 @@ const createElm = (user) => { //Creates innerHTML elements
 </figure>
 `
 }
+console.log();
