@@ -9,6 +9,7 @@
     <script src="./assets/js/nav.js" defer></script>
     <script src="./assets/js/footer.js" defer></script>
     <script src="./assets/js/schedule.js" defer></script>
+    <script src="./assets/js/model.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -19,7 +20,7 @@
               src="./assets/images/MOVIE CITY.png"
               alt="LOGO"
               height="150px"
-              width="150px"
+              width="150px"z
           /></a>
           <h1>Movie city</h1>
         </div>
@@ -38,6 +39,18 @@
       </nav>
     </header>
 
+<!-- Trigger/Open The Modal -->
+<button style="display: none;" id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" id="modalContent">
+    <span class="close">&times;</span>
+  </div>
+
+</div>
 
 
     <select name="" id="tvChoice" value="The CW" onchange="Clear(this)">
