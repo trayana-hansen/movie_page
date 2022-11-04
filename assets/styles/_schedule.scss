@@ -15,11 +15,14 @@
 
   h3 {
     color: c.$white;
+
+    font-size: 1.5em;
   }
 
   h4 {
     color: c.$white;
     text-align: center;
+    font-size: 1em;
   }
 
   div {
@@ -35,6 +38,7 @@ h2 {
   margin-top: 3.5em;
   color: c.$gold;
   text-align: center;
+  margin-left: 0.5em;
 }
 #tvChoice {
   background-color: c.$black;
@@ -43,6 +47,8 @@ h2 {
   border-radius: 10px;
   margin-left: 2em;
   outline: 0;
+  width: 140px;
+  font-family: "Open Sans", sans-serif;
 }
 #modalContent{
   display: grid;

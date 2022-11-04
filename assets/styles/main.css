@@ -168,6 +168,23 @@ h3 {
 }
 #modalContent #modalRightDiv p span {
   margin-left: 0.5vw;
+h5 {
+  font-family: dreamAvenue, sans-serif;
+  color: #d89536;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+.content::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: #d89536;
+  border-radius: 10px;
 }
 
 .content {
@@ -184,10 +201,12 @@ h3 {
 }
 .content h3 {
   color: #fff;
+  font-size: 1.5em;
 }
 .content h4 {
   color: #fff;
   text-align: center;
+  font-size: 1em;
 }
 .content div {
   background-size: cover;
@@ -203,6 +222,7 @@ h2 {
   margin-top: 3.5em;
   color: #d89536;
   text-align: center;
+  margin-left: 0.5em;
 }
 
 #tvChoice {
@@ -212,6 +232,8 @@ h2 {
   border-radius: 10px;
   margin-left: 2em;
   outline: 0;
+  width: 140px;
+  font-family: "Open Sans", sans-serif;
 }
 
 #modalContent {
@@ -238,6 +260,9 @@ h2 {
   margin-left: 0.5vw;
 }
 
+footer {
+  margin-top: 4em;
+}
 footer p {
   color: #d89536;
   text-align: center;
@@ -291,4 +316,28 @@ footer p {
 body {
   background-color: #1f1f1f;
   font-family: "Open Sans", sans-serif;
+}
+
+#camera-body,
+#reel-1,
+#reel-2 {
+  fill: #d89536;
+  fill-opacity: 0.95;
+  stroke: none;
+}
+
+#preloader {
+  height: 100vh;
+  color: #d89536;
+  display: flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#preloader span {
+  font-family: dreamAvenue, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 2em;
 }/*# sourceMappingURL=main.css.map */
