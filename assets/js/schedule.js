@@ -47,6 +47,7 @@ console.log(day);
         //On error
     })
     .finally(() => {
+      window.localStorage.setItem('fetch', apiData)
         console.log();
         contents.innerHTML = 
         `<h2>The CW</h2>`
@@ -57,7 +58,7 @@ if (element.schedule.days == day) {
               console.log(element.rating.average);  
               
               contents.innerHTML += `
-            <article >
+            <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}</h3>
 <div style="background-image: url('${element.image.original}')">
     <p><span>🔥</span>${element.rating.average}</p>
@@ -73,14 +74,28 @@ if (element.schedule.days == day) {
             
 
         });
-        
+        document.querySelectorAll('article').forEach(element => {
+          element.addEventListener('click', function () {
+              document.querySelector('#modalContent').innerHTML = `
+              <img src="${apiData[element.id].image.original}" alt="">
+              <div id="modalRightDiv">
+                <h6>${apiData[element.id].name} <span>${apiData[element.id].network.name}</span></h6>
+                <p>${apiData[element.id].summary}</p>
+      
+                <p>${apiData[element.id].genres}</p>
+                <p>${apiData[element.id].runtime} min</p>
+                <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
+              </div>
+`
+modal.style.display = "block";
+          })
+      }); 
     })
    }
 
    fetchCall()
 
    function Clear(obj) {
-    console.log(document.querySelectorAll('select')[0]);
         apiData.sort()
         contents.innerHTML = 
         `<h2>${obj.value}</h2>`
@@ -88,10 +103,11 @@ if (element.schedule.days == day) {
         apiData.forEach(element => {
             if (element.schedule.days == day) {
                 if (element.network.name == obj.value) {
-                
+                  
+                console.log(apiData.indexOf(element));
               
               contents.innerHTML += `
-            <article >
+            <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}</h3>
 <div style="background-image: url('${element.image.original}')">
     <p><span>🔥</span>${element.rating.average}</p>
@@ -107,5 +123,20 @@ if (element.schedule.days == day) {
             
 
         });
-        
+       document.querySelectorAll('article').forEach(element => {
+                element.addEventListener('click', function () {
+                    document.querySelector('#modalContent').innerHTML = `
+                    <img src="${apiData[element.id].image.original}" alt="">
+                    <div id="modalRightDiv">
+                      <h6>${apiData[element.id].name} <span>${apiData[element.id].network.name}</span></h6>
+                      <p>${apiData[element.id].summary}</p>
+            
+                      <p>${apiData[element.id].genres}</p>
+                      <p>${apiData[element.id].runtime} min</p>
+                      <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
+                    </div>
+`
+modal.style.display = "block";
+                })
+            }); 
     }
