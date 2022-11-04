@@ -231,4 +231,28 @@ footer p {
 body {
   background-color: #1f1f1f;
   font-family: "Open Sans", sans-serif;
+}
+
+#camera-body,
+#reel-1,
+#reel-2 {
+  fill: #d89536;
+  fill-opacity: 0.95;
+  stroke: none;
+}
+
+#preloader {
+  height: 100vh;
+  color: #d89536;
+  display: flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#preloader span {
+  font-family: dreamAvenue, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 2em;
 }/*# sourceMappingURL=main.css.map */
