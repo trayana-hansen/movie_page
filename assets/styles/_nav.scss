@@ -1,0 +1,85 @@
+@use "./colors" as c;
+@use "./fonts" as f;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-container {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+h1 {
+  font-size: 3.2em;
+  color: c.$gold;
+  font-family: dreamAvenue, sans-serif;
+  font-weight: bold;
+}
+.navbar-links {
+  ul {
+    margin: 0;
+    padding: 1em;
+    display: flex;
+  }
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: c.$white;
+      padding: 1rem;
+      display: block;
+      font-family: dreamAvenue, sans-serif;
+      font-size: 2em;
+      font-weight: bold;
+      &:hover {
+        background-color: c.$gold;
+        color: c.$black;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+.toggle-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: c.$white;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+    ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    li {
+      text-align: center;
+      a {
+        padding: 0.5rem;
+      }
+    }
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}

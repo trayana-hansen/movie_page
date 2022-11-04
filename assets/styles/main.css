@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@font-face {
+  font-family: dreamAvenue;
+  src: url(../fonts/FontsFree-Net-Dream-Avenue.ttf);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+h1 {
+  font-size: 3.2em;
+  color: #d89536;
+  font-family: dreamAvenue, sans-serif;
+  font-weight: bold;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 1em;
+  display: flex;
+}
+.navbar-links li {
+  list-style: none;
+}
+.navbar-links li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  display: block;
+  font-family: dreamAvenue, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+.navbar-links li a:hover {
+  background-color: #d89536;
+  color: #1f1f1f;
+  border-radius: 15px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}
+h2 {
+  text-align: center;
+  font-size: 2em;
+  padding: 0.3em;
+  margin-top: 2em;
+}
+
+h3,
+a {
+  font-size: 1.3em;
+  margin: 0.3em;
+}
+
+h3 {
+  font-family: dreamAvenue, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #d89536;
+}
+
+.teamWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  padding: 1em;
+  margin: 1em;
+}
+.teamWrapper .card {
+  box-shadow: 0 4px 8px 0 #fff;
+  color: #fff;
+  width: 200px;
+}
+.teamWrapper img {
+  width: 100%;
+  border-radius: 2em;
+}
+.teamWrapper .container p {
+  margin: 0.5em;
+}
+.teamWrapper .container .button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #1f1f1f;
+  background-color: #fff;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2em;
+}
+.teamWrapper .container .button:hover {
+  background-color: #d89536;
+  color: #1f1f1f;
+  font-weight: bold;
+}
+
+h5 {
+  font-family: dreamAvenue, sans-serif;
+  color: #d89536;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+.content::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: #d89536;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  width: 100vw;
+  overflow: auto;
+}
+.content p {
+  color: #fff;
+  text-align: right;
+  padding: 1vh;
+}
+.content h3 {
+  color: #fff;
+  font-size: 1.5em;
+}
+.content h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
+.content div {
+  background-size: cover;
+  height: 30vh;
+  width: 13vw;
+}
+
+span {
+  display: block;
+}
+
+h2 {
+  margin-top: 3.5em;
+  color: #d89536;
+  text-align: center;
+  margin-left: 0.5em;
+}
+
+#tvChoice {
+  background-color: #1f1f1f;
+  color: #d89536;
+  border: 2px solid #d89536;
+  border-radius: 10px;
+  margin-left: 2em;
+  outline: 0;
+  width: 140px;
+  font-family: "Open Sans", sans-serif;
+}
+
+footer {
+  margin-top: 4em;
+}
+footer p {
+  color: #d89536;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1f1f1f;
+  font-family: "Open Sans", sans-serif;
+}
+
+#camera-body,
+#reel-1,
+#reel-2 {
+  fill: #d89536;
+  fill-opacity: 0.95;
+  stroke: none;
+}
+
+#preloader {
+  height: 100vh;
+  color: #d89536;
+  display: flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#preloader span {
+  font-family: dreamAvenue, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 2em;
+}/*# sourceMappingURL=main.css.map */

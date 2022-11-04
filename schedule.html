@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <script src="./assets/js/nav.js" defer></script>
+    <script src="./assets/js/footer.js" defer></script>
+    <script src="./assets/js/schedule.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo-container">
+          <a href="./index.html">
+            <img
+              src="./assets/images/MOVIE CITY.png"
+              alt="LOGO"
+              height="150px"
+              width="150px"
+          /></a>
+          <h1>Movie city</h1>
+        </div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./schedule.html">Schedule</a></li>
+            <li><a href="./aboutUs.html">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <select name="" id="tvChoice" value="The CW" onchange="Clear(this)">
+
+
+      <option value="TNT">TNT</option>
+      <option value="CBS">CBS</option>
+      <option value="CTV Sci-Fi Channel">CTV Sci-Fi Channel</option>
+      <option value="HBO">HBO</option>
+      <option value="The CW">The CW</option>
+      <option value="Showtime">Showtime</option>
+      <option value="FOX">FOX</option>
+      <option value="ABC">ABC</option>
+      <option value="NBC">NBC</option>
+      <option value="Showcase">Showcase</option>
+      <option value="FX">FX</option>
+      <option value="Fuji TV">Fuji TV</option>
+      <option value="TBS">TBS</option>
+      <option value="NTV">NTV</option>
+      <option value="History">History</option>
+    </select>
+    <section id="content" class="content"></section>
+    <footer class="footer" id="year"></footer>
+  </body>
+</html>
