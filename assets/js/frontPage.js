@@ -56,7 +56,7 @@ fetch(url)
           if (element.rating.average >= 8) {
           
         contents.innerHTML += `
-      <article >
+      <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
 <p><span>🔥</span>${element.rating.average}</p>
@@ -74,7 +74,7 @@ for (let index = 0; index < 10; index++) {
   const element = apiData[random];
 
       contents2.innerHTML += `
-    <article >
+    <article id="${element.id}">
 <h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
 <p><span>🔥</span>${element.rating.average}</p>
@@ -85,15 +85,31 @@ for (let index = 0; index < 10; index++) {
     `  
 
 }
+document.querySelectorAll('article').forEach(element => {
+  element.addEventListener('click', function () {
+      document.querySelector('#modalContent').innerHTML = `
+      <img src="${apiData[element.id].image.original}" alt="">
+      <div id="modalRightDiv">
+        <h6>${apiData[element.id].name} <span>${apiData[element.id].network.name}</span></h6>
+        <p>${apiData[element.id].summary}</p>
 
-  apiData.forEach(element => {
-    
-});
+        <p>${apiData[element.id].genres}</p>
+        <p>${apiData[element.id].runtime} min</p>
+        <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
+      </div>
+`
+modal.style.display = "block";
+  })
+})    
+  
+
 }
 
-        
-        
+
+      
 
     )}
 
 fetchCall()
+
+ 
