@@ -9,6 +9,7 @@
     <script src="./assets/js/nav.js" defer></script>
     <script src="./assets/js/footer.js" defer></script>
     <script src="./assets/js/schedule.js" defer></script>
+    <script src="./assets/js/model.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -37,11 +38,27 @@
         </div>
       </nav>
     </header>
+    <button style="display: none" id="myBtn">Open Modal</button>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+      <!-- Modal content -->
+      <div id="modalContent" class="modal-content">
+        <img src="./assets/images/3037.jpg" alt="">
+        <div id="modalRightDiv">
+          <h6>Titel <span>Channel</span></h6>
+          <p>Summery</p>
 
-
+          <p>Category</p>
+          <p>Runtime</p>
+          <p>🔥 <span>7.5</span></p>
+        </div>
+        
+      </div>
+    
+    </div>
     <select name="" id="tvChoice" value="The CW" onchange="Clear(this)">
-
 
       <option value="TNT">TNT</option>
       <option value="CBS">CBS</option>

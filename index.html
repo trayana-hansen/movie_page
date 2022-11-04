@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +10,10 @@
     <script src="./assets/js/frontPage.js" type="module" defer></script>
     <script src="./assets/js/nav.js" defer></script>
     <script src="./assets/js/footer.js" defer></script>
+
+    <script src="./assets/js/model.js" defer></script>
     <script src="./assets/js/loader.js" defer></script>
+
   </head>
   <body>
     <div id="preloader">
@@ -85,6 +88,25 @@
         </div>
       </nav>
     </header>
+    <button style="display: none" id="myBtn">Open Modal</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+        <!-- Modal content -->
+        <div id="modalContent" class="modal-content">
+          <img src="./assets/images/3037.jpg" alt="">
+          <div id="modalRightDiv">
+            <h6>Titel <span>Channel</span></h6>
+            <p>Summery</p>
+  
+            <p>Category</p>
+            <p>Runtime</p>
+            <p>🔥 <span>7.5</span></p>
+          </div>
+          
+        </div>
+      
+      </div>
     <h5>Most popular</h5>
     <section class="content" id="content"></section>
 
