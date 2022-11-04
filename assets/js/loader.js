@@ -5,7 +5,7 @@ function loading() {
 	}, 3000);
 	setTimeout(() => {
 		document.querySelector('#preloader').style.display = "none"
-	}, 4000);
+	}, 3500);
 }
 loading()
 
