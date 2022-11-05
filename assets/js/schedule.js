@@ -1,3 +1,17 @@
+const rating = [
+  {0: "💩"},
+  {1: "💩"} ,
+  {2: "💩"} ,
+  {3: "💩"} ,
+  {4: "😊"} ,
+  {5: "😊"} ,
+  {6: "😊"} ,
+  {7: "😊"} ,
+  {8: "🔥"} ,
+  {9: "🔥"} ,
+  {10: "🔥"} ,
+]
+
 const url = 'http://api.tvmaze.com/shows'
 let apiData;
 const contents = document.querySelector('#content')
@@ -61,7 +75,7 @@ if (element.network.name == "The CW") {
         <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}</h3>
 <div style="background-image: url('${element.image.original}')">
-<p><span>🔥</span>${element.rating.average}</p>
+<p><span>${rating[Math.round(element.rating.average)][Math.round(element.rating.average)]}</span>${element.rating.average}</p>
 
 </div>
 <h4>${element.name}</h4>
@@ -84,7 +98,7 @@ if (element.network.name == "The CW") {
   
             <p>${apiData[element.id].genres}</p>
             <p>${apiData[element.id].runtime} min</p>
-            <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
+            <p>${rating[Math.round(apiData[element.id].rating.average)][Math.round(apiData[element.id].rating.average)]} <span>${apiData[element.id].rating.average}</span></p>
           </div>
 `
 modal.style.display = "block";
@@ -110,7 +124,7 @@ function Clear(obj) {
         <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}</h3>
 <div style="background-image: url('${element.image.original}')">
-<p><span>🔥</span>${element.rating.average}</p>
+<p><span>${rating[Math.round(element.rating.average)][Math.round(element.rating.average)]}</span>${element.rating.average}</p>
 
 </div>
 <h4>${element.name}</h4>
@@ -133,7 +147,7 @@ function Clear(obj) {
         
                   <p>${apiData[element.id].genres}</p>
                   <p>${apiData[element.id].runtime} min</p>
-                  <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
+                  <p>${rating[Math.round(apiData[element.id].rating.average)][Math.round(element.rating.average)]} <span>${apiData[element.id].rating.average}</span></p>
                 </div>
 `
 modal.style.display = "block";
