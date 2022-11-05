@@ -18,6 +18,7 @@ const contents = document.querySelector('#content')
 const contents2 = document.querySelector('#content2')
 let theDay = new Date().getDay()
 let day;
+let number;
 switch(theDay)
 {
   case 0:
@@ -65,13 +66,18 @@ fetch(url)
   console.log(Math.round(apiData[1].rating.average));
   apiData.sort()
 
-  apiData.forEach(element => {
-      if (element.schedule.days == day) {
+for (let index = 0; index < apiData.length; index++) {
+  
+  const element = apiData[index];
+  number = apiData.indexOf(element)
+  if (apiData[number].network !== null) {
+  if (element.schedule.days == day) {
           if (element.rating.average >= 8) {
-          console.log(rating[Math.round(element.rating.average)][Math.round(element.rating.average)]);
+           
+             console.log(element.name)
         contents.innerHTML += `
       <article id="${apiData.indexOf(element)}">
-<h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
+<h3>${element.schedule.time}<span>${apiData[number].network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
 <p><span>${rating[Math.round(element.rating.average)][Math.round(element.rating.average)]}</span>${element.rating.average}</p>
 </div>
@@ -80,15 +86,21 @@ fetch(url)
       `  
       }
       }
-  });
+    }
+            }
+
+
+
 
 for (let index = 0; index < 10; index++) {
  let random = Math.floor(Math.random() * 100) + 1;
   const element = apiData[random];
+number = apiData.indexOf(element)
+if (apiData[number].network !== null) {
 
       contents2.innerHTML += `
     <article id="${apiData.indexOf(element)}">
-<h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
+<h3>${element.schedule.time}<span>on ${apiData[number].network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
 <p><span>${rating[Math.round(element.rating.average)][Math.round(element.rating.average)]}</span>${element.rating.average}</p>
 </div>
@@ -96,6 +108,10 @@ for (let index = 0; index < 10; index++) {
 </article>
     `  
 
+
+
+}
+    
 }
 document.querySelectorAll('article').forEach(element => {
   element.addEventListener('click', function () {
