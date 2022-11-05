@@ -1,3 +1,17 @@
+const rating = [
+  {0: "💩"},
+  {1: "💩"} ,
+  {2: "💩"} ,
+  {3: "💩"} ,
+  {4: "😊"} ,
+  {5: "😊"} ,
+  {6: "😊"} ,
+  {7: "😊"} ,
+  {8: "🔥"} ,
+  {9: "🔥"} ,
+  {10: "🔥"} ,
+]
+
 const url = 'http://api.tvmaze.com/shows'
 let apiData;
 const contents = document.querySelector('#content')
@@ -48,18 +62,18 @@ fetch(url)
     //On error
 })
 .finally(() => {
-  console.log(document.querySelectorAll('select')[0]);
+  console.log(Math.round(apiData[1].rating.average));
   apiData.sort()
 
   apiData.forEach(element => {
       if (element.schedule.days == day) {
           if (element.rating.average >= 8) {
-          
+          console.log(rating[Math.round(element.rating.average)][Math.round(element.rating.average)]);
         contents.innerHTML += `
       <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
-<p><span>🔥</span>${element.rating.average}</p>
+<p><span>${rating[Math.round(element.rating.average)][Math.round(element.rating.average)]}</span>${element.rating.average}</p>
 </div>
 <h4>${element.name}</h4>
 </article>
@@ -76,7 +90,7 @@ for (let index = 0; index < 10; index++) {
     <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}<span>on ${element.network.name}</span></h3>
 <div style="background-image: url('${element.image.original}')">
-<p><span>🔥</span>${element.rating.average}</p>
+<p><span>${rating[Math.round(element.rating.average)][Math.round(element.rating.average)]}</span>${element.rating.average}</p>
 </div>
 <h4>${element.name}</h4>
 </article>
@@ -92,7 +106,7 @@ document.querySelectorAll('article').forEach(element => {
         <p>${apiData[element.id].summary}</p>
         <p>${apiData[element.id].genres}</p>
         <p>${apiData[element.id].runtime} min</p>
-        <p>🔥 <span>${apiData[element.id].rating.average}</span></p>
+        <p>${rating[Math.round(apiData[element.id].rating.average)][Math.round(apiData[element.id].rating.average)]} <span>${apiData[element.id].rating.average}</span></p>
       </div>
 `
 modal.style.display = "block";
