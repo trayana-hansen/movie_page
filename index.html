@@ -7,12 +7,19 @@
     <title>Home</title>
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="stylesheet" href="./assets/styles/loader.css" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <script src="./assets/js/frontPage.js" type="module" defer></script>
     <script src="./assets/js/nav.js" defer></script>
     <script src="./assets/js/footer.js" defer></script>
-    
     <script src="./assets/js/model.js" defer></script>
     <script src="./assets/js/loader.js" defer></script>
+    <script src="./assets//js//app.js" defer></script>
   </head>
   <body>
     <div id="preloader">
@@ -81,8 +88,8 @@
         <div class="navbar-links">
           <ul>
             <li><a href="./index.html">Home</a></li>
-            <li><a href="./schedule.html">Schedule</a></li>
-            <li><a href="./aboutUs.html">About Us</a></li>
+            <li><a href="./pages/schedule.html">Schedule</a></li>
+            <li><a href="./pages/aboutUs.html">About Us</a></li>
           </ul>
         </div>
       </nav>
@@ -92,21 +99,19 @@
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
-        <!-- Modal content -->
-        <div id="modalContent" class="modal-content">
-          <img src="./assets/images/3037.jpg" alt="">
-          <div id="modalRightDiv">
-            <h6>Titel <span>Channel</span></h6>
-            <p>Summery</p>
-  
-            <p>Category</p>
-            <p>Runtime</p>
-            <p>🔥 <span>7.5</span></p>
-          </div>
-          
+      <!-- Modal content -->
+      <div id="modalContent" class="modal-content">
+        <img src="./assets/images/3037.jpg" alt="" />
+        <div id="modalRightDiv">
+          <h6>Titel <span>Channel</span></h6>
+          <p>Summery</p>
+
+          <p>Category</p>
+          <p>Runtime</p>
+          <p>🔥 <span>7.5</span></p>
         </div>
-      
       </div>
+    </div>
 
     <h5>Most popular</h5>
     <section class="content" id="content"></section>

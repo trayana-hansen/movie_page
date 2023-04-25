@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="../assets//styles//main.css" />
     <script src="./assets/js/nav.js" defer></script>
     <script src="./assets/js/footer.js" defer></script>
     <script src="./assets/js/schedule.js" defer></script>
@@ -20,7 +20,8 @@
               src="./assets/images/MOVIE CITY.png"
               alt="LOGO"
               height="150px"
-              width="150px"z
+              width="150px"
+              z
           /></a>
           <h1>Movie city</h1>
         </div>
@@ -32,30 +33,25 @@
         <div class="navbar-links">
           <ul>
             <li><a href="./index.html">Home</a></li>
-            <li><a href="./schedule.html">Schedule</a></li>
-            <li><a href="./aboutUs.html">About Us</a></li>
+            <li><a href="../pages/schedule.html">Schedule</a></li>
+            <li><a href="../pages/aboutUs.html">About Us</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
-<!-- Trigger/Open The Modal -->
-<button style="display: none;" id="myBtn">Open Modal</button>
+    <!-- Trigger/Open The Modal -->
+    <button style="display: none" id="myBtn">Open Modal</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content" id="modalContent">
-    <span class="close">&times;</span>
-  </div>
-
-</div>
-
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" id="modalContent">
+        <span class="close">&times;</span>
+      </div>
+    </div>
 
     <select name="" id="tvChoice" value="The CW" onchange="Clear(this)">
-
-
       <option value="TNT">TNT</option>
       <option value="CBS">CBS</option>
       <option value="CTV Sci-Fi Channel">CTV Sci-Fi Channel</option>
