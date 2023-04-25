@@ -6,14 +6,12 @@ const assets = [
   "./",
   "./index.html",
   "./assets/js/app.js",
-  "./assets/js/footer.js",
-  "./assets/js/frontPage.js",
   "./assets/js/loader.js",
-  "./assets/js/model.jss",
   "./assets/js/nav.js",
   "./assets/styles/main.css",
   "./assets/styles/loader.css",
   "./pages/fallback.html",
+  "./assets/images/MOVIE CITY.png",
 ];
 
 const limitCacheSize = (cacheName, numAllowedFiles) => {
